@@ -4,10 +4,10 @@ require_relative "../spec_helper"
 require "logstash/plugin"
 require "logstash/event"
 
-describe LogStash::Codecs::Dots do
+describe LogStash::Codecs::Ansi do
 
   it "should initialize without errors" do
-    klass = LogStash::Plugin.lookup("codec", "dots")
+    klass = LogStash::Plugin.lookup("codec", "ansi")
     expect { klass.new }.to_not raise_error
   end
 
